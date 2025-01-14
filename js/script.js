@@ -9,8 +9,9 @@
 let display = document.querySelectorAll("input");
 const confirmButton = document.getElementById('confirm-button')
 const timerNumber = document.getElementById('numbers-list')
+const randomNumber = document.querySelectorAll("span")
 
-console.log(display, confirmButton, timerNumber);
+console.log(display, confirmButton, timerNumber, randomNumber);
 
 
 let timer;
@@ -34,6 +35,20 @@ document.addEventListener('DOMContentLoaded', function(){
         clearInterval(timer);
         
     }, 31000);
+
+    
+    
+    let generatedNumber = 0;
+    
+    for(let i = 0 ; i<randomNumber.length; i++){
+
+        generatedNumber = parseInt(Math.floor(Math.random() * 40) + 10);
+        randomNumber[i].textContent = generatedNumber;
+        
+       
+    }
+    
+    
 })
 
   

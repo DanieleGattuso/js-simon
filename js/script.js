@@ -28,6 +28,12 @@ document.addEventListener('DOMContentLoaded', function(){
         count = count - 1
         timerNumber.textContent = count;
     },  1000)
+
+    // Lo stoppiamo dopo 30 secondi
+    setTimeout(() => {
+        clearInterval(timer);
+        
+    }, 31000);
 })
 
   
